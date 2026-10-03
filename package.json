@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postbuild": "node scripts/share-metadata.mjs",
+    "test:share": "node --test scripts/share-metadata.spec.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

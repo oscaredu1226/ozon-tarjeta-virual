@@ -1,0 +1,5 @@
+# Normalize the document URL, serve the home page, and redirect unknown paths.
+# Existing assets remain accessible because the catch-all is not forced.
+/index.html  /            301!
+/            /index.html  200
+/*           /            302

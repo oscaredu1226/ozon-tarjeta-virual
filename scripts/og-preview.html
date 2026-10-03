@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vista previa de OZON</title>
+    <link rel="stylesheet" href="/assets/brand/brand-logo.css" />
+    <style>
+      @font-face {
+        font-family: Manrope;
+        src: url('/assets/fonts/manrope-regular.ttf');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: Manrope;
+        src: url('/assets/fonts/manrope-bold.ttf');
+        font-weight: 700;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        font-family: Manrope, sans-serif;
+        background: #f3fafc;
+        color: #073a56;
+      }
+      .hero {
+        position: relative;
+        height: 477px;
+        padding: 40px 48px;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 10% 5%, #03adc1 0%, transparent 60%),
+          linear-gradient(120deg, #008ea8, #064361);
+        color: white;
+      }
+      .watermark {
+        position: absolute;
+        width: 470px;
+        height: 470px;
+        right: -105px;
+        top: -70px;
+        opacity: 0.07;
+      }
+      .top {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .ozon-logo {
+        --brand-unit: 1.15px;
+      }
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 19px;
+        color: #d1f7fa;
+      }
+      .location img {
+        width: 24px;
+        height: 24px;
+        filter: brightness(0) invert(1);
+      }
+      .profile {
+        position: relative;
+        display: grid;
+        grid-template-columns: 230px 1fr 316px;
+        gap: 30px;
+        align-items: center;
+        margin-top: 45px;
+      }
+      .portrait {
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        border: 5px solid white;
+        object-fit: cover;
+        object-position: 50% 22%;
+        box-shadow: 0 15px 40px #003d5d40;
+      }
+      .eyebrow {
+        margin: 0 0 10px;
+        font-size: 14px;
+        letter-spacing: 1.6px;
+        font-weight: 700;
+        color: #bef5f5;
+      }
+      h1 {
+        font-size: 35px;
+        line-height: 1.18;
+        letter-spacing: -1px;
+        margin: 0 0 13px;
+      }
+      .specialty {
+        margin: 0 0 15px;
+        font-size: 23px;
+        color: #e0f9fc;
+      }
+      .cmp {
+        display: inline-block;
+        padding: 7px 15px;
+        border-radius: 24px;
+        background: #e0f8fc;
+        color: #08566f;
+        font-size: 17px;
+      }
+      .phone {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0 0;
+        font-size: 23px;
+        font-weight: 700;
+      }
+      .phone img {
+        width: 23px;
+        height: 23px;
+        filter: brightness(0) invert(1);
+      }
+      .welcome {
+        padding: 27px;
+        background: #f0fbfd;
+        border-radius: 20px;
+        color: #073a56;
+        box-shadow: 0 15px 40px #00354c30;
+      }
+      .welcome .eyebrow {
+        color: #07879c;
+        font-size: 12px;
+      }
+      h2 {
+        font-size: 29px;
+        line-height: 1.2;
+        letter-spacing: -0.8px;
+        margin: 0 0 17px;
+      }
+      .welcome p:last-child {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+        color: #436778;
+      }
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        padding: 27px 48px;
+      }
+      .service {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        background: white;
+        border: 1px solid #d6eaf0;
+        border-radius: 16px;
+        padding: 20px 18px;
+      }
+      .icon {
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        border-radius: 13px;
+        background: #def3f7;
+      }
+      .icon img {
+        width: 31px;
+        height: 31px;
+        filter: invert(34%) sepia(88%) saturate(785%) hue-rotate(151deg) brightness(88%)
+          contrast(101%);
+      }
+      h3 {
+        margin: 0 0 5px;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+      .service p {
+        margin: 0;
+        font-size: 14px;
+        color: #536f80;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <img class="watermark" src="/ozon-icon-transparent.png" alt="" />
+        <div class="top">
+          <div class="ozon-logo" aria-label="OZON Terapia del Dolor">
+            <span class="ozon-symbol"><img src="/assets/brand/ozon-original.jpg" alt="" /></span>
+            <span class="ozon-wordmark"><img src="/assets/brand/ozon-original.jpg" alt="" /></span>
+          </div>
+          <div class="location">
+            <img src="/assets/icons/map-pin.svg" alt="" /> Consultorio · Arequipa
+          </div>
+        </div>
+        <div class="profile">
+          <img class="portrait" src="/assets/doctors/oscar-soto.png" alt="Dr. Oscar Soto" />
+          <div>
+            <p class="eyebrow">ATENCIÓN CERCANA Y PERSONALIZADA</p>
+            <h1>Dr. Oscar Juan<br />Soto Caminada</h1>
+            <p class="specialty">Médico general</p>
+            <span class="cmp">CMP <strong>29626</strong></span>
+            <p class="phone"><img src="/assets/icons/phone.svg" alt="" /> +51 959 281 145</p>
+          </div>
+          <div class="welcome">
+            <p class="eyebrow">OZON · TERAPIA DEL DOLOR</p>
+            <h2>Tu bienestar,<br />en buenas manos.</h2>
+            <p>Medicina general, ozonoterapia y terapia del dolor, con espacio para escucharte.</p>
+          </div>
+        </div>
+      </section>
+      <section class="services" aria-label="Servicios del consultorio">
+        <div class="service">
+          <span class="icon"><img src="/assets/icons/stethoscope.svg" alt="" /></span>
+          <div>
+            <h3>Medicina general</h3>
+            <p>Consulta y orientación médica</p>
+          </div>
+        </div>
+        <div class="service">
+          <span class="icon"><img src="/assets/icons/ozone-molecule.svg" alt="" /></span>
+          <div>
+            <h3>Ozonoterapia</h3>
+            <p>Valoración médica individual</p>
+          </div>
+        </div>
+        <div class="service">
+          <span class="icon"><img src="/assets/icons/spine.svg" alt="" /></span>
+          <div>
+            <h3>Terapia del Dolor</h3>
+            <p>Atención personalizada</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

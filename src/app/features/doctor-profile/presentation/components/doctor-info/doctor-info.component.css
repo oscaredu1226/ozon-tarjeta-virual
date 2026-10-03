@@ -65,12 +65,12 @@ h1 {
 
 @media (min-width: 1101px) {
   .profile-label {
-    font-size: 14px;
+    font-size: 12px;
   }
   .specialty {
-    font-size: 22px;
+    font-size: 20px;
   }
   .cmp {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

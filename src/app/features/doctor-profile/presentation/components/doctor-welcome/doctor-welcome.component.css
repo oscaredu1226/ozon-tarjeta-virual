@@ -6,7 +6,7 @@
 
 .welcome {
   position: relative;
-  padding: clamp(28px, 2.2vw, 44px);
+  padding: clamp(24px, 1.8vw, 32px);
   border: 1px solid rgb(255 255 255 / 70%);
   border-radius: 24px;
   color: #073b5c;
@@ -17,31 +17,32 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.12em;
   color: #007f98;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 .welcome-label app-icon {
   --icon-size: 32px;
   flex: 0 0 auto;
 }
 .welcome h2 {
-  font-size: clamp(30px, 2vw, 38px);
+  font-size: clamp(26px, 1.7vw, 30px);
   line-height: 1.22;
   letter-spacing: -0.03em;
   text-wrap: balance;
 }
 .welcome-copy {
   margin-top: 16px;
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.6;
   color: #466578;
 }
 .welcome-services {
   display: grid;
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
   border-top: 1px solid #cce4ec;
   padding-top: 18px;
   margin-top: 18px;
@@ -50,7 +51,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
 }
 .welcome-services app-icon {
@@ -61,13 +62,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 22px;
-  padding: 14px 18px;
+  margin-top: 18px;
+  padding: 12px 16px;
   border-radius: 10px;
   background: #006f8a;
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   transition: background 0.2s ease;
 }

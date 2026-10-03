@@ -10,11 +10,11 @@
   gap: clamp(16px, 1.2vw, 32px);
 }
 .action {
-  min-height: 82px;
+  min-height: 74px;
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 18px 22px;
+  padding: 14px 22px;
   text-align: left;
   text-decoration: none;
   border-radius: var(--radius-md);

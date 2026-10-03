@@ -126,10 +126,11 @@ p {
 
 @media (min-width: 1101px) {
   :root {
-    --text-small: 15px;
-    --text-body: 18px;
-    --text-title: 20px;
-    --text-section: 28px;
-    --text-profile: 36px;
+    --text-small: 14px;
+    --text-body: 16px;
+    --text-title: 18px;
+    --text-section: 26px;
+    --text-profile: 32px;
+    --contact-icon-size: 26px;
   }
 }

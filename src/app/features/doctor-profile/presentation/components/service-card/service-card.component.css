@@ -71,12 +71,12 @@ h3 {
 
 @media (min-width: 1101px) {
   h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .service-description {
-    font-size: 17px;
+    font-size: 16px;
   }
   .service-detail {
-    font-size: 16px;
+    font-size: 15px;
   }
 }

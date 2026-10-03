@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  width: calc(238 * var(--brand-unit, 1px));
+  height: calc(66 * var(--brand-unit, 1px));
+}
+.brand-fallback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+strong {
+  font-size: calc(40 * var(--brand-unit, 1px));
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+span {
+  font-size: calc(11 * var(--brand-unit, 1px));
+  letter-spacing: 0.1em;
+}

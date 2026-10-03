@@ -1,0 +1,2 @@
+# Keep contact downloads compatible with vCard importers on every platform.
+*.vcf text eol=crlf

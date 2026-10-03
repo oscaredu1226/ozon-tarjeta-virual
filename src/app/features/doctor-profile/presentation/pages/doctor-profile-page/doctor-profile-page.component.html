@@ -1,0 +1,32 @@
+<a class="skip-link" href="#profile-content">Ir al perfil médico</a>
+<main class="page" id="profile-content">
+  @if (facade.loading()) {
+    <app-profile-skeleton />
+  } @else if (facade.failed()) {
+    <section class="error-state" role="alert">
+      <app-brand-logo />
+      <app-icon class="error-icon" name="stethoscope" />
+      <h1>No pudimos cargar el perfil</h1>
+      <p>
+        Revisa tu conexión e inténtalo nuevamente. La tarjeta se mostrará cuando recuperemos la
+        información.
+      </p>
+      <button type="button" (click)="facade.load()">Reintentar</button>
+    </section>
+  } @else if (facade.profile(); as profile) {
+    <article class="business-card" aria-labelledby="doctor-name">
+      <app-doctor-header [profile]="profile" />
+      <div class="card-body">
+        <app-doctor-actions [actions]="facade.actions()" (unavailable)="showUnavailable($event)" />
+        <app-services-section [services]="profile.services" />
+        <app-care-section [profile]="profile" />
+        <app-contact-section
+          [profile]="profile"
+          [phoneHref]="facade.phoneHref()"
+          (unavailable)="showUnavailable($event)"
+        />
+      </div>
+    </article>
+  }
+</main>
+<app-info-dialog />

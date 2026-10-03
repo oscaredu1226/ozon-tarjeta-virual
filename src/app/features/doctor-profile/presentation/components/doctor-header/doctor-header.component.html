@@ -1,0 +1,64 @@
+<header class="profile-header" aria-labelledby="doctor-name">
+  <div class="header-top">
+    <app-brand-logo class="header-brand" [source]="profile().logo" />
+    <app-doctor-contact-tools />
+  </div>
+  <span class="watermark" aria-hidden="true"
+    ><img src="ozon-icon-transparent.png" alt="" width="192" height="192"
+  /></span>
+  <div class="hero-grid">
+    <div class="profile">
+      <div class="portrait">
+        @if (displayPhoto(); as photo) {
+          @if (loadedPhoto() !== photo) {
+            <span class="portrait-loading" aria-hidden="true"></span>
+          }
+          <img
+            class="doctor-photo"
+            [class.is-loaded]="loadedPhoto() === photo"
+            (load)="loadedPhoto.set(photo)"
+            (error)="failedPhoto.set(photo)"
+            [src]="photo"
+            [alt]="'Fotografía de ' + profile().name"
+            width="380"
+            height="380"
+          />
+        } @else {
+          <div
+            class="photo-placeholder"
+            role="img"
+            aria-label="Espacio para la fotografía del médico"
+          >
+            <app-icon name="user-heart" />
+            <span>Fotografía del médico</span>
+          </div>
+        }
+      </div>
+      <div class="profile-details">
+        <app-doctor-info [profile]="profile()" />
+        <p class="profile-summary">
+          Tu bienestar, en buenas manos. Medicina general, ozonoterapia y terapia del dolor con una
+          atención cercana y personalizada para ti.
+        </p>
+        <div class="profile-contact">
+          @if (profile().phone; as phone) {
+            <a [href]="'tel:' + phone"
+              ><app-icon name="phone" /><span>{{ profile().phoneLabel }}</span></a
+            >
+          }
+          @if (profile().mapUrl; as mapUrl) {
+            <a [href]="mapUrl" target="_blank" rel="noopener noreferrer"
+              ><app-icon name="map-pin" /><span>{{ profile().location }}</span></a
+            >
+          }
+        </div>
+      </div>
+    </div>
+    <app-doctor-welcome [profile]="profile()" />
+  </div>
+  <div class="hero-bottom" aria-label="Enfoque de atención">
+    <span><app-icon name="user-heart" /> Atención personalizada</span>
+    <span><app-icon name="stethoscope" /> Evaluación médica</span>
+    <span><app-icon name="map-pin" /> Cerca de ti, en Arequipa</span>
+  </div>
+</header>

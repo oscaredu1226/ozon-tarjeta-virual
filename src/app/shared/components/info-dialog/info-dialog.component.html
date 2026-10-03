@@ -1,0 +1,15 @@
+<dialog
+  #dialog
+  aria-labelledby="dialog-title"
+  aria-describedby="dialog-description"
+  (click)="closeOnBackdrop($event)"
+>
+  <button type="button" class="close" aria-label="Cerrar" (click)="close()">
+    <app-icon name="x" />
+  </button>
+  <span class="dialog-icon"><app-icon name="stethoscope" /></span>
+  <p class="eyebrow">{{ content().label || 'OZON · TERAPIA DEL DOLOR' }}</p>
+  <h2 id="dialog-title">{{ content().title }}</h2>
+  <p id="dialog-description">{{ content().description }}</p>
+  <button type="button" class="confirm" (click)="close()">Entendido</button>
+</dialog>

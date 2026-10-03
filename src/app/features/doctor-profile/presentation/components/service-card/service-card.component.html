@@ -1,0 +1,17 @@
+<article class="service-card" [attr.aria-labelledby]="'service-' + service().id">
+  <div class="service-heading">
+    <span
+      class="service-icon"
+      [class.ozone-icon]="service().category === 'ozone'"
+      [class.spine-icon]="service().category === 'pain'"
+    >
+      <app-icon [name]="icons[service().category]" />
+      @if (service().category === 'ozone') {
+        <span class="ozone-formula" aria-hidden="true">O₃</span>
+      }
+    </span>
+    <h3 [id]="'service-' + service().id">{{ service().name }}</h3>
+  </div>
+  <p class="service-description">{{ service().description }}</p>
+  <p class="service-detail">{{ service().detail }}</p>
+</article>

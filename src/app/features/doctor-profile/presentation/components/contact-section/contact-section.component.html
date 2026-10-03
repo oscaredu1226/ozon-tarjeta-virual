@@ -1,0 +1,41 @@
+<footer class="contact" aria-label="Información de contacto">
+  <div class="contact-item">
+    <span class="contact-icon"><app-icon name="map-pin" /></span>
+    <div class="contact-copy">
+      <h2>Ubicación</h2>
+      @if (profile().mapUrl; as url) {
+        <a [href]="url" target="_blank" rel="noopener noreferrer"
+          >{{ profile().location }}<app-icon name="arrow-up-right"
+        /></a>
+      } @else {
+        <button type="button" (click)="unavailable.emit('Ubicación')">
+          {{ profile().location }}<app-icon name="arrow-up-right" />
+        </button>
+      }
+    </div>
+  </div>
+  <div class="contact-item">
+    <span class="contact-icon"><app-icon name="phone" /></span>
+    <div class="contact-copy">
+      <h2>Teléfono</h2>
+      @if (phoneHref(); as href) {
+        <a [href]="href">{{ profile().phoneLabel }}</a>
+      } @else {
+        <button type="button" (click)="unavailable.emit('Teléfono')">
+          {{ profile().phoneLabel }}
+        </button>
+      }
+    </div>
+  </div>
+  <div class="social-item">
+    @if (networks().length) {
+      <h2>Síguenos</h2>
+      <app-social-links [networks]="networks()" (unavailable)="unavailable.emit($event)" />
+    } @else if (whatsappHref(); as href) {
+      <h2>¿Coordinamos tu visita?</h2>
+      <a class="footer-whatsapp" [href]="href" target="_blank" rel="noopener noreferrer"
+        ><app-icon name="brand-whatsapp" /> Escríbenos por WhatsApp</a
+      >
+    }
+  </div>
+</footer>

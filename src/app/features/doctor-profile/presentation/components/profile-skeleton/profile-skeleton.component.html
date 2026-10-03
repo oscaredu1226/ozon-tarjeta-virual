@@ -1,0 +1,65 @@
+<section
+  class="skeleton-card"
+  role="status"
+  aria-busy="true"
+  aria-label="Cargando el perfil médico"
+>
+  <div class="skeleton-header">
+    <app-brand-logo />
+    <div class="skeleton-hero" aria-hidden="true">
+      <div class="skeleton-profile">
+        <span class="bone skeleton-avatar"></span>
+        <div class="skeleton-info">
+          <span class="bone skeleton-name"></span><span class="bone skeleton-specialty"></span
+          ><span class="bone skeleton-badge"></span> <span class="bone skeleton-line"></span
+          ><span class="bone skeleton-line"></span>
+        </div>
+      </div>
+      <div class="skeleton-welcome">
+        <span class="bone skeleton-name"></span><span class="bone skeleton-name short"></span
+        ><span class="bone skeleton-line"></span><span class="bone skeleton-line"></span>
+      </div>
+    </div>
+    <div class="skeleton-highlights" aria-hidden="true">
+      @for (i of [1, 2, 3]; track i) {
+        <span class="bone skeleton-line"></span>
+      }
+    </div>
+  </div>
+  <div class="skeleton-body" aria-hidden="true">
+    <div class="skeleton-actions">
+      @for (i of [1, 2, 3, 4]; track i) {
+        <span class="bone skeleton-action"></span>
+      }
+    </div>
+    <span class="bone skeleton-title"></span>
+    <div class="skeleton-services">
+      @for (i of [1, 2, 3]; track i) {
+        <div class="skeleton-service">
+          <span class="bone skeleton-icon"></span>
+          @for (j of [1, 2, 3, 4, 5]; track j) {
+            <span class="bone skeleton-line"></span>
+          }
+        </div>
+      }
+    </div>
+    <div class="skeleton-care">
+      <div>
+        @for (i of [1, 2, 3, 4]; track i) {
+          <span class="bone skeleton-line"></span>
+        }
+      </div>
+      <div>
+        @for (i of [1, 2, 3, 4]; track i) {
+          <span class="bone skeleton-line"></span>
+        }
+      </div>
+    </div>
+    <div class="skeleton-contact">
+      @for (i of [1, 2, 3]; track i) {
+        <span class="bone skeleton-line"></span>
+      }
+    </div>
+  </div>
+  <p class="loading-label">Cargando la información de OZON…</p>
+</section>

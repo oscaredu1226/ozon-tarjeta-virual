@@ -1,0 +1,21 @@
+<div class="social-links" aria-label="Redes sociales">
+  @for (network of networks(); track network.type) {
+    @if (network.url; as url) {
+      <a
+        [href]="url"
+        target="_blank"
+        rel="noopener noreferrer"
+        [attr.aria-label]="network.label + ' (abre una nueva pestaña)'"
+        ><app-icon [name]="icons[network.type]"
+      /></a>
+    } @else {
+      <button
+        type="button"
+        [attr.aria-label]="network.label"
+        (click)="unavailable.emit(network.label)"
+      >
+        <app-icon [name]="icons[network.type]" />
+      </button>
+    }
+  }
+</div>

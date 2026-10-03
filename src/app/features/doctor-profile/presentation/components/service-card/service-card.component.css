@@ -1,0 +1,82 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.service-card {
+  height: 100%;
+  padding: 24px;
+  border: 1px solid #dcecf1;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f7fcfd, #edf7fa);
+}
+.service-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.service-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  border-radius: 14px;
+  background: #d9f1f6;
+  --icon-size: 29px;
+}
+h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.ozone-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  --icon-size: 25px;
+}
+.ozone-formula {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+.spine-icon {
+  --icon-size: 38px;
+}
+.service-description {
+  font-size: 16.5px;
+  line-height: 1.55;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.service-detail {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  padding-top: 12px;
+  border-top: 1px solid #d8e9ee;
+}
+@media (max-width: 700px) {
+  .service-card {
+    padding: 21px;
+  }
+  .service-heading {
+    margin-bottom: 14px;
+  }
+}
+
+@media (min-width: 1101px) {
+  h3 {
+    font-size: 22px;
+  }
+  .service-description {
+    font-size: 18.5px;
+  }
+  .service-detail {
+    font-size: 17.5px;
+  }
+}

@@ -1,0 +1,146 @@
+/* Loaded before the Angular bundle so even a failed bootstrap has visible UI. */
+html {
+  background: #f5fafc;
+}
+body {
+  margin: 0;
+}
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  --brand-unit: 1.25px;
+  gap: clamp(22px, 1.7vw, 44px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding: 32px 24px;
+  color: white;
+  background:
+    radial-gradient(ellipse at 20% 15%, #00b4ce, transparent 65%),
+    linear-gradient(135deg, #008eae, #005675);
+  text-align: center;
+  font-family: Manrope, system-ui, sans-serif;
+}
+.boot-screen .ozon-logo {
+  animation: logo-breathe 1.7s ease-in-out infinite;
+}
+.boot-name {
+  margin: 10px 0 0;
+  font-size: 15.5px;
+  letter-spacing: 0.16em;
+  opacity: 0.75;
+}
+.boot-message {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.6;
+}
+.boot-progress {
+  position: relative;
+  overflow: clip;
+  width: 240px;
+  height: 6px;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 20%);
+}
+.boot-progress::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: white;
+  transform-origin: left;
+  animation: boot-progress 1.4s ease-in-out infinite;
+}
+.boot-help {
+  visibility: hidden;
+  max-width: 680px;
+  font-size: 20px;
+  line-height: 1.7;
+  animation: show-boot-help 0.01s 12s forwards;
+}
+.boot-help a,
+.boot-retry {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  border: 1px solid rgb(255 255 255 / 55%);
+  border-radius: 12px;
+  background: white;
+  color: #005675;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.boot-retry:focus-visible,
+.boot-help a:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 5px;
+}
+.boot-error .boot-message {
+  max-width: 800px;
+}
+.boot-error .ozon-logo {
+  animation: none;
+}
+@keyframes logo-breathe {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes boot-progress {
+  0% {
+    transform: translateX(-100%) scaleX(0.5);
+  }
+  50% {
+    transform: translateX(0) scaleX(0.75);
+  }
+  100% {
+    transform: translateX(100%) scaleX(0.5);
+  }
+}
+@keyframes show-boot-help {
+  to {
+    visibility: visible;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .boot-screen .ozon-logo,
+  .boot-progress::after {
+    animation: none;
+  }
+  .boot-progress::after {
+    transform: scaleX(0.65);
+  }
+}
+
+@media (max-width: 700px) {
+  .boot-screen {
+    --brand-unit: 1.2px;
+    gap: 22px;
+  }
+  .boot-name {
+    font-size: 15.5px;
+  }
+  .boot-message {
+    font-size: 22px;
+  }
+  .boot-help {
+    font-size: 17.5px;
+  }
+}
+@media (max-width: 375px) {
+  .boot-screen {
+    --brand-unit: 1.05px;
+  }
+}

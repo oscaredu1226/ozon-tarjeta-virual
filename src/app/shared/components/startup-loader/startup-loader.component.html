@@ -1,0 +1,19 @@
+<section
+  class="boot-screen"
+  [class.boot-error]="failed()"
+  [attr.role]="failed() ? 'alert' : 'status'"
+  aria-live="polite"
+>
+  <app-brand-logo />
+  <p class="boot-name">TU BIENESTAR, CERCA DE TI</p>
+  @if (failed()) {
+    <h1>No pudimos cargar OZON</h1>
+    <p class="boot-message">
+      Revisa tu conexión y vuelve a intentarlo. Tu perfil estará aquí cuando termine de cargar.
+    </p>
+    <button type="button" class="boot-retry" (click)="reload()">Volver a cargar</button>
+  } @else {
+    <p class="boot-message">Bienvenido a OZON</p>
+    <div class="boot-progress" aria-hidden="true"></div>
+  }
+</section>

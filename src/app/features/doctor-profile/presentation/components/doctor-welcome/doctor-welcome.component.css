@@ -1,0 +1,130 @@
+:host {
+  display: block;
+  min-width: 0;
+  --icon-filter: none;
+}
+
+.welcome {
+  position: relative;
+  padding: clamp(28px, 2.2vw, 44px);
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 24px;
+  color: #073b5c;
+  background: linear-gradient(145deg, #fff, #e6f8fc);
+  box-shadow: 0 28px 60px rgb(0 23 40 / 20%);
+}
+.welcome-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #007f98;
+  margin-bottom: 16px;
+}
+.welcome-label app-icon {
+  --icon-size: 32px;
+  flex: 0 0 auto;
+}
+.welcome h2 {
+  font-size: clamp(33px, 2.2vw, 42px);
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.welcome-copy {
+  margin-top: 16px;
+  font-size: 18.5px;
+  line-height: 1.75;
+  color: #466578;
+}
+.welcome-services {
+  display: grid;
+  gap: 12px;
+  border-top: 1px solid #cce4ec;
+  padding-top: 18px;
+  margin-top: 18px;
+}
+.welcome-services span {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 17.5px;
+  font-weight: 600;
+}
+.welcome-services app-icon {
+  --icon-size: 24px;
+}
+.welcome-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: #006f8a;
+  color: white;
+  text-decoration: none;
+  font-size: 17.5px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+.welcome-cta:hover {
+  background: #005675;
+}
+.welcome-cta app-icon {
+  --icon-size: 22px;
+  --icon-filter: brightness(0) invert(1);
+  flex: 0 0 auto;
+}
+@media (max-width: 1100px) {
+  .welcome {
+    padding: 28px;
+  }
+  .welcome h2 {
+    max-width: 28ch;
+    font-size: 33px;
+  }
+  .welcome-services {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .welcome-cta {
+    width: fit-content;
+    gap: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .welcome {
+    padding: 20px;
+    border-radius: 18px;
+  }
+  .welcome-label {
+    font-size: 11px;
+    letter-spacing: 0.09em;
+    margin-bottom: 18px;
+  }
+  .welcome-label app-icon {
+    --icon-size: 27px;
+  }
+  .welcome h2 {
+    font-size: 26.5px;
+  }
+  .welcome-copy {
+    display: none;
+  }
+  .welcome-services {
+    display: none;
+  }
+  .welcome-services span {
+    font-size: 15.5px;
+  }
+  .welcome-cta {
+    display: none;
+  }
+}
+.welcome-cta:focus-visible {
+  outline-color: #006f8a;
+}

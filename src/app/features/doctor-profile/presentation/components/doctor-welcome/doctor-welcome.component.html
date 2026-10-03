@@ -1,0 +1,15 @@
+<section class="welcome" aria-labelledby="welcome-title">
+  <p class="welcome-label"><app-icon name="user-heart" /> ATENCIÓN CERCANA · OZON</p>
+  <h2 id="welcome-title">{{ profile().headline }}</h2>
+  <p class="welcome-copy">{{ profile().introduction }}</p>
+  <div class="welcome-services" aria-label="Áreas de atención">
+    <span><app-icon name="stethoscope" />Medicina general</span>
+    <span><app-icon name="ozone-molecule" />Ozonoterapia</span>
+    <span><app-icon name="spine" />Terapia del dolor</span>
+  </div>
+  @if (profile().appointmentUrl; as appointmentUrl) {
+    <a class="welcome-cta" [href]="appointmentUrl" target="_blank" rel="noopener noreferrer"
+      >Conversemos sobre tu salud <app-icon name="arrow-up-right"
+    /></a>
+  }
+</section>

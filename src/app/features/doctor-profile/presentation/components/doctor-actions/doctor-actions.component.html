@@ -1,0 +1,32 @@
+<nav class="actions" aria-label="Contactar al médico">
+  @for (action of actions(); track action.id) {
+    @if (action.href; as href) {
+      <a
+        [class]="'action ' + action.id"
+        [href]="href"
+        [target]="action.external ? '_blank' : null"
+        [attr.rel]="action.external ? 'noopener noreferrer' : null"
+      >
+        <app-icon [name]="icons[action.id]" />
+        <span class="action-label"
+          ><strong>{{ action.title }}</strong
+          ><span>{{ action.subtitle }}</span></span
+        >
+        <app-icon class="arrow" name="arrow-up-right" />
+      </a>
+    } @else {
+      <button
+        type="button"
+        [class]="'action ' + action.id"
+        (click)="unavailable.emit(action.title)"
+      >
+        <app-icon [name]="icons[action.id]" />
+        <span class="action-label"
+          ><strong>{{ action.title }}</strong
+          ><span>{{ action.subtitle }}</span></span
+        >
+        <app-icon class="arrow" name="arrow-up-right" />
+      </button>
+    }
+  }
+</nav>

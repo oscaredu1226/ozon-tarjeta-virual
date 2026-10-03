@@ -1,0 +1,14 @@
+:host {
+  display: inline-flex;
+  width: var(--icon-size, 24px);
+  height: var(--icon-size, 24px);
+  flex: 0 0 auto;
+}
+img {
+  width: 100%;
+  height: 100%;
+  filter: var(
+    --icon-filter,
+    invert(28%) sepia(82%) saturate(1118%) hue-rotate(161deg) brightness(87%) contrast(103%)
+  );
+}

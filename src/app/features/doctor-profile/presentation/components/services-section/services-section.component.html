@@ -1,0 +1,11 @@
+<section aria-labelledby="services-title">
+  <div class="section-heading">
+    <h2 id="services-title">Servicios para tu bienestar</h2>
+    <span>Cada consulta empieza por escucharte</span>
+  </div>
+  <div class="services">
+    @for (service of services().slice(0, 3); track service.id) {
+      <app-service-card [service]="service" />
+    }
+  </div>
+</section>

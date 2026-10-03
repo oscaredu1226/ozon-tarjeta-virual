@@ -8,7 +8,7 @@
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
-  padding: var(--page-gutter);
+  padding: 12px var(--page-gutter) var(--page-gutter);
 }
 .business-card {
   display: flex;

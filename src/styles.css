@@ -27,11 +27,11 @@
   --radius-md: 14px;
   --radius-lg: 16px;
   --card-padding: 40px;
-  --text-small: 14.5px;
-  --text-body: 17.5px;
-  --text-title: 20px;
-  --text-section: 26.5px;
-  --text-profile: 35px;
+  --text-small: 13px;
+  --text-body: 16px;
+  --text-title: 18px;
+  --text-section: 24px;
+  --text-profile: 32px;
   --portrait-size: 220px;
   --contact-icon-size: 30px;
   --shadow-soft: 0 24px 80px -24px rgb(0 70 100 / 18%);
@@ -46,7 +46,7 @@ body {
   background: var(--color-background);
   color: var(--color-text-primary);
   font-family: var(--font-family);
-  font-size: 16.5px;
+  font-size: 15px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -103,22 +103,22 @@ p {
 @media (max-width: 1100px) {
   :root {
     --card-padding: 28px;
-    --text-small: 14.5px;
-    --text-body: 17.5px;
-    --text-title: 20px;
-    --text-section: 26.5px;
-    --text-profile: 31px;
+    --text-small: 13px;
+    --text-body: 16px;
+    --text-title: 18px;
+    --text-section: 24px;
+    --text-profile: 28px;
     --portrait-size: 180px;
     --contact-icon-size: 28px;
   }
 }
 @media (max-width: 700px) {
   :root {
-    --text-small: 13px;
-    --text-body: 16.5px;
-    --text-title: 20px;
-    --text-section: 26.5px;
-    --text-profile: 31px;
+    --text-small: 12px;
+    --text-body: 15px;
+    --text-title: 18px;
+    --text-section: 24px;
+    --text-profile: 28px;
     --portrait-size: 144px;
     --contact-icon-size: 30px;
   }
@@ -126,10 +126,10 @@ p {
 
 @media (min-width: 1101px) {
   :root {
-    --text-small: 16.5px;
-    --text-body: 20px;
-    --text-title: 22px;
-    --text-section: 31px;
-    --text-profile: 39.5px;
+    --text-small: 15px;
+    --text-body: 18px;
+    --text-title: 20px;
+    --text-section: 28px;
+    --text-profile: 36px;
   }
 }

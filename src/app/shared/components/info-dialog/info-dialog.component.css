@@ -33,21 +33,21 @@ dialog::backdrop {
   --icon-size: 30px;
 }
 .eyebrow {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.12em;
   color: var(--color-primary-dark);
   font-weight: 700;
   margin-bottom: 8px;
 }
 h2 {
-  font-size: 25.5px;
+  font-size: 23px;
   line-height: 1.35;
   margin-bottom: 12px;
 }
 #dialog-description {
   color: var(--color-text-secondary);
   line-height: 1.7;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 .confirm {
   margin-top: 26px;

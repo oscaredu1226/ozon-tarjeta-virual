@@ -14,7 +14,7 @@
   border-radius: 10px;
   background: rgb(255 255 255 / 9%);
   color: white;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -29,7 +29,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 16.5px;
+  font-size: 15px;
   color: #ceeff6;
 }
 .clinic-label app-icon {
@@ -52,14 +52,14 @@
   }
   .save-contact {
     padding: 10px;
-    font-size: 13px;
+    font-size: 12px;
     gap: 6px;
   }
   .save-contact app-icon {
     --icon-size: 20px;
   }
   .clinic-label {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 .save-contact:focus-visible {

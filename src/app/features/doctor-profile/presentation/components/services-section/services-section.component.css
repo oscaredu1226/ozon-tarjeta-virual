@@ -42,7 +42,7 @@ h2 {
     gap: 7px;
   }
   .section-heading > span {
-    font-size: 14.5px;
+    font-size: 13px;
   }
   .services {
     grid-template-columns: 1fr;

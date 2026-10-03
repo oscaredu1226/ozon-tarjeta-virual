@@ -4,7 +4,7 @@
   min-width: 0;
 }
 .profile-label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   margin-bottom: 12px;
@@ -19,7 +19,7 @@ h1 {
   text-wrap: balance;
 }
 .specialty {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -31,13 +31,13 @@ h1 {
   margin-top: 16px;
   background: #e1f7fb;
   color: var(--color-primary-deep);
-  font-size: 15.5px;
+  font-size: 14px;
   letter-spacing: 0.02em;
   border-radius: 999px;
 }
 @media (max-width: 1100px) {
   .specialty {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (max-width: 700px) {
@@ -45,32 +45,32 @@ h1 {
     text-align: center;
   }
   .profile-label {
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom: 10px;
   }
   h1 {
-    font-size: clamp(28.5px, 7.48vw, 35px);
+    font-size: clamp(26px, 6.8vw, 32px);
     max-width: 20ch;
     margin: 0 auto 12px;
   }
   .specialty {
-    font-size: 20px;
+    font-size: 18px;
   }
   .cmp {
     margin-top: 14px;
-    font-size: 16.5px;
+    font-size: 15px;
     padding: 5px 18px;
   }
 }
 
 @media (min-width: 1101px) {
   .profile-label {
-    font-size: 15.5px;
+    font-size: 14px;
   }
   .specialty {
-    font-size: 24px;
+    font-size: 22px;
   }
   .cmp {
-    font-size: 17.5px;
+    font-size: 16px;
   }
 }

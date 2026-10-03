@@ -65,7 +65,7 @@
 }
 .profile-details {
   min-width: 0;
-  --text-profile: clamp(42px, 2.7vw, 50.5px);
+  --text-profile: clamp(38px, 2.45vw, 46px);
 }
 .portrait {
   position: relative;
@@ -113,13 +113,13 @@
   --icon-size: 66px;
 }
 .photo-placeholder span {
-  font-size: 14.5px;
+  font-size: 13px;
   color: var(--color-primary-dark);
 }
 .profile-summary {
   max-width: 40ch;
   margin-top: 24px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
   color: #d3edf4;
 }
@@ -136,7 +136,7 @@
   gap: 13px;
   width: fit-content;
   max-width: 100%;
-  font-size: 18.5px;
+  font-size: 17px;
   line-height: 1.5;
   text-decoration: none;
   color: #e0f4f8;
@@ -164,7 +164,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 16.5px;
+  font-size: 15px;
   color: #c6e8f1;
 }
 .hero-bottom app-icon {
@@ -193,7 +193,7 @@
     gap: 32px;
   }
   .profile-details {
-    --text-profile: 37.5px;
+    --text-profile: 34px;
   }
   .hero-bottom {
     gap: 24px;

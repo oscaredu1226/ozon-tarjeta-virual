@@ -80,7 +80,7 @@ h2 {
   }
   .contact-copy a,
   .contact-copy button {
-    font-size: 16.5px;
+    font-size: 15px;
   }
 }
 @media (max-width: 700px) {
@@ -108,11 +108,11 @@ h2 {
   .contact-copy a,
   .contact-copy button {
     min-height: 32px;
-    font-size: 13px;
+    font-size: 12px;
     white-space: normal;
   }
   h2 {
-    font-size: 13px;
+    font-size: 12px;
   }
   .contact-copy app-icon {
     display: none;
@@ -132,7 +132,7 @@ h2 {
 @media (max-width: 360px) {
   .contact-copy a,
   .contact-copy button {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -148,7 +148,7 @@ h2 {
   gap: 8px;
   min-height: 38px;
   color: var(--color-primary-dark);
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   --icon-size: 22px;
@@ -166,12 +166,12 @@ h2 {
     padding-left: 0;
   }
   .footer-whatsapp {
-    font-size: 15.5px;
+    font-size: 14px;
   }
 }
 
 @media (min-width: 1101px) {
   .footer-whatsapp {
-    font-size: 17.5px;
+    font-size: 16px;
   }
 }

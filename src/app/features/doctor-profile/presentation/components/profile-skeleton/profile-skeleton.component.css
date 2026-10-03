@@ -111,7 +111,7 @@
   padding: 0 20px 18px;
   text-align: center;
   color: var(--color-text-secondary);
-  font-size: 14.5px;
+  font-size: 13px;
 }
 @keyframes shimmer {
   to {

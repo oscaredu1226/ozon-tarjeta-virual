@@ -101,10 +101,10 @@
     gap: 4px;
   }
   .action-label strong {
-    font-size: 20px;
+    font-size: 18px;
   }
   .action-label > span {
-    font-size: 14.5px;
+    font-size: 13px;
   }
   .action .arrow {
     display: inline-flex;

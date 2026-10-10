@@ -40,6 +40,7 @@
     <base href="/" />
     <link rel="icon" type="image/png" sizes="192x192" href="ozon-icon-transparent.png" />
     <link rel="apple-touch-icon" href="ozon-icon-transparent.png" />
+    <link rel="preload" as="image" href="assets/brand/ozon-logo-white.svg" />
     <link rel="stylesheet" data-beasties-skip href="assets/brand/brand-logo.css" />
     <link rel="stylesheet" data-beasties-skip href="assets/startup.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -47,14 +48,14 @@
   <body>
     <app-root>
       <section class="boot-screen" role="status" aria-label="Iniciando OZON">
-        <div class="ozon-logo" role="img" aria-label="OZON · Terapia del Dolor">
-          <span class="ozon-symbol"
-            ><img src="assets/brand/ozon-original.jpg" alt="" width="1500" height="1500"
-          /></span>
-          <span class="ozon-wordmark"
-            ><img src="assets/brand/ozon-original.jpg" alt="" width="1500" height="1500"
-          /></span>
-        </div>
+        <img
+          class="ozon-logo"
+          src="assets/brand/ozon-logo-white.svg"
+          alt="OZON · Terapia del Dolor"
+          width="952"
+          height="264"
+          fetchpriority="high"
+        />
         <p class="boot-name">TU BIENESTAR, CERCA DE TI</p>
         <p class="boot-message">Bienvenido a OZON</p>
         <div class="boot-progress" aria-hidden="true"></div>

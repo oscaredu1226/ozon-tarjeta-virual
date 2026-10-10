@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, computed, input, signal } from '@an
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BrandLogoComponent {
-  readonly source = input('assets/brand/ozon-original.jpg');
+  readonly source = input('assets/brand/ozon-logo-white.svg');
   private readonly failedSource = signal<string | null>(null);
   readonly available = computed(() => this.source() !== this.failedSource());
   markUnavailable(): void {

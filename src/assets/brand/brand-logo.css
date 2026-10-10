@@ -1,42 +1,9 @@
-/* The two windows use the supplied, unmodified OZON photograph. */
+/* Self-contained official artwork: no CSS crops, filters or blend layers. */
 .ozon-logo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: calc(10 * var(--brand-unit, 1px));
-  width: calc(238 * var(--brand-unit, 1px));
-  height: calc(66 * var(--brand-unit, 1px));
-  mix-blend-mode: screen;
-}
-.ozon-symbol,
-.ozon-wordmark {
-  position: relative;
   display: block;
-  overflow: clip;
-  flex: 0 0 auto;
-}
-.ozon-symbol {
-  width: calc(60 * var(--brand-unit, 1px));
-  height: calc(60 * var(--brand-unit, 1px));
-}
-.ozon-wordmark {
-  width: calc(167 * var(--brand-unit, 1px));
-  height: calc(64 * var(--brand-unit, 1px));
-}
-.ozon-logo img {
-  position: absolute;
-  max-width: none;
+  width: calc(238 * var(--brand-unit, 1px));
+  max-width: 100%;
   height: auto;
-  filter: grayscale(1) brightness(0.8) contrast(8);
-}
-.ozon-symbol img {
-  width: calc(163 * var(--brand-unit, 1px));
-  left: calc(-51.4 * var(--brand-unit, 1px));
-  top: calc(-28 * var(--brand-unit, 1px));
-}
-.ozon-wordmark img {
-  width: calc(259 * var(--brand-unit, 1px));
-  left: calc(-47 * var(--brand-unit, 1px));
-  top: calc(-145 * var(--brand-unit, 1px));
+  aspect-ratio: 238 / 66;
+  object-fit: contain;
 }

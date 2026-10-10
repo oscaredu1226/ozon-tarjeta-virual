@@ -1,7 +1,9 @@
 :host {
   display: block;
   width: calc(238 * var(--brand-unit, 1px));
-  height: calc(66 * var(--brand-unit, 1px));
+  max-width: 100%;
+  aspect-ratio: 238 / 66;
+  flex-shrink: 0;
 }
 .brand-fallback {
   display: flex;

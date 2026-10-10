@@ -1,12 +1,13 @@
 @if (available()) {
-  <div class="ozon-logo" role="img" aria-label="OZON · Terapia del Dolor">
-    <span class="ozon-symbol"
-      ><img [src]="source()" alt="" width="1500" height="1500" (error)="markUnavailable()"
-    /></span>
-    <span class="ozon-wordmark"
-      ><img [src]="source()" alt="" width="1500" height="1500" (error)="markUnavailable()"
-    /></span>
-  </div>
+  <img
+    class="ozon-logo"
+    [src]="source()"
+    alt="OZON · Terapia del Dolor"
+    width="952"
+    height="264"
+    fetchpriority="high"
+    (error)="markUnavailable()"
+  />
 } @else {
   <div class="brand-fallback" aria-label="OZON · Terapia del Dolor">
     <strong>OZON</strong><span>TERAPIA DEL DOLOR</span>

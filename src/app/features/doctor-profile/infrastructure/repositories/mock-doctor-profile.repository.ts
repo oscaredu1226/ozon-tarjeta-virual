@@ -11,7 +11,7 @@ export const MOCK_DOCTOR_PROFILE: DoctorProfile = {
   introduction:
     'Un espacio para hablar de tu salud, resolver tus dudas y encontrar juntos el siguiente paso de tu atención.',
   photo: 'assets/doctors/oscar-soto.png',
-  logo: 'assets/brand/ozon-original.jpg',
+  logo: 'assets/brand/ozon-logo-white.svg',
   location: 'José Luis Bustamante y Rivero, Arequipa',
   mapUrl: 'https://maps.app.goo.gl/qJ1h4nhepdk7JgaQ7',
   phoneLabel: '+51 959 281 145',

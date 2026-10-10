@@ -1,0 +1,51 @@
+<section class="share-profile" aria-labelledby="share-profile-title">
+  <div>
+    <h2 id="share-profile-title">Comparte OZON</h2>
+    <p>Muestra el QR y lleva este perfil a otro celular.</p>
+  </div>
+  <button type="button" class="show-qr" (click)="open()">
+    <app-icon name="qrcode" /> Mostrar QR
+  </button>
+</section>
+
+<dialog
+  #dialog
+  aria-labelledby="profile-qr-title"
+  aria-describedby="profile-qr-description"
+  (click)="closeOnBackdrop($event)"
+>
+  <button type="button" class="close" aria-label="Cerrar QR" (click)="close()">
+    <app-icon name="x" />
+  </button>
+  <p class="eyebrow">OZON · DR. OSCAR SOTO</p>
+  <h2 id="profile-qr-title">Escanea y abre el perfil</h2>
+  <p id="profile-qr-description">
+    Apunta la cámara de tu celular al código QR para visitar el sitio.
+  </p>
+
+  @if (loading()) {
+    <div class="qr-loading" role="status" aria-label="Preparando el código QR">
+      <span>Preparando el QR…</span>
+    </div>
+  } @else if (image(); as source) {
+    <img
+      class="qr-image"
+      [src]="source"
+      alt="Código QR para abrir el perfil de OZON"
+      width="512"
+      height="512"
+    />
+  } @else if (failed()) {
+    <div class="qr-error" role="alert">
+      <p>No pudimos preparar el QR. Puedes abrir el enlace o volver a intentarlo.</p>
+      <button type="button" (click)="generate()">Reintentar</button>
+    </div>
+  }
+
+  <a class="profile-url" [href]="profileUrl" target="_blank" rel="noopener noreferrer">{{
+    profileUrl
+  }}</a>
+  @if (image(); as source) {
+    <a class="download-qr" [href]="source" download="ozon-dr-oscar-soto-qr.png">Descargar QR</a>
+  }
+</dialog>

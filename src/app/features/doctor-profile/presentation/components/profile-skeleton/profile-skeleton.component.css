@@ -107,11 +107,15 @@
   padding-top: 32px;
   margin-top: 26px;
 }
+.skeleton-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
 .loading-label {
-  padding: 0 20px 18px;
-  text-align: center;
-  color: var(--color-text-secondary);
-  font-size: 13px;
+  color: #d3edf4;
+  font-size: 14px;
 }
 @keyframes shimmer {
   to {
@@ -238,6 +242,10 @@ app-brand-logo {
   .skeleton-header {
     padding: 28px 20px 64px;
     gap: 28px;
+  }
+  .skeleton-top {
+    flex-direction: column;
+    text-align: center;
   }
   app-brand-logo {
     --brand-unit: 1.1px;

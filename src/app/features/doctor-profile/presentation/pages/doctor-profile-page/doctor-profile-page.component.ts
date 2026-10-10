@@ -10,6 +10,7 @@ import { InfoDialogComponent } from '../../../../../shared/components/info-dialo
 import { ProfileSkeletonComponent } from '../../components/profile-skeleton/profile-skeleton.component';
 import { BrandLogoComponent } from '../../../../../shared/components/brand-logo/brand-logo.component';
 import { AppIconComponent } from '../../../../../shared/components/app-icon/app-icon.component';
+import { ProfileQrComponent } from '../../components/profile-qr/profile-qr.component';
 @Component({
   selector: 'app-doctor-profile-page',
   imports: [
@@ -22,6 +23,7 @@ import { AppIconComponent } from '../../../../../shared/components/app-icon/app-
     ProfileSkeletonComponent,
     BrandLogoComponent,
     AppIconComponent,
+    ProfileQrComponent,
   ],
   providers: DOCTOR_PROFILE_PROVIDERS,
   templateUrl: './doctor-profile-page.component.html',

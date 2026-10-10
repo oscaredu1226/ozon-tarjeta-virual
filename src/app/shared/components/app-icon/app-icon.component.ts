@@ -11,6 +11,7 @@ export type IconName =
   | 'x'
   | 'user-heart'
   | 'user-plus'
+  | 'qrcode'
   | 'shield-check'
   | 'brand-whatsapp'
   | 'brand-instagram'

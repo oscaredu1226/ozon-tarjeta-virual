@@ -49,11 +49,11 @@ Para integrar una API, implementar `DoctorProfileRepository.getProfile()` y sust
 
 ## Identidad y recursos
 
-- Logo: `src/assets/brand/ozon-original.jpg`, copia intacta del JPG proporcionado por el usuario. La cabecera presenta sus partes mediante ventanas CSS y un filtro para separar visualmente el fondo. El emblema y las letras proceden del archivo original, no de un dibujo nuevo. Si se entrega una versión transparente, puede simplificarse la presentación del logo.
+- Logo: `src/assets/brand/ozon-logo-white.svg`, recurso autocontenido con transparencia que incorpora el JPG oficial intacto. El emblema y las letras proceden del archivo original. La misma imagen se usa en portada, bienvenida y skeleton sin recortes ni mezcla de capas CSS, para evitar fondos rectangulares en Safari. Puede regenerarse con `node scripts/prepare-brand-logo.mjs`.
 - Fotografía: `src/assets/doctors/oscar-soto.png`, copia intacta del retrato proporcionado. Si falla su carga, se muestra un icono de Tabler.
 - Iconos: SVG locales de [Tabler Icons v3.34.1](https://github.com/tabler/tabler-icons/tree/v3.34.1), licencia MIT incluida. Las redes usan los iconos de marca de esa biblioteca; no se dibujaron con CSS.
 - Tipografía: Manrope local, licencia OFL incluida.
-- Sin Tailwind, Bootstrap, Material ni nuevas dependencias JavaScript.
+- Sin Tailwind, Bootstrap ni Material. El QR se genera localmente con `qrcode` (MIT), cargado solo al pulsar «Mostrar QR».
 
 La tarjeta reorganiza los mismos componentes en móvil: acciones verticales, servicios en lista y contacto compacto. Incluye foco visible, teclado, textos alternativos, diálogo nativo con Escape y respeto por movimiento reducido.
 
@@ -73,6 +73,8 @@ La tipografía mantiene una escala moderada en escritorio, con límites mediante
 La cabecera incluye bienvenida y ubicación. Las tarjetas de servicios muestran toda su explicación sin clics ni diálogos; una sección adicional presenta al médico y los pasos de consulta. Las redes sin enlaces reales no se muestran.
 
 Ubicación forma parte de la misma fila de acciones que WhatsApp, citas y llamada. En tableta las cuatro acciones pasan a dos columnas y en móvil a una columna.
+
+Al final del perfil, «Mostrar QR» abre un diálogo con el código del sitio y permite descargarlo en PNG. El destino toma la URL canónica configurada en la compilación de Netlify; en desarrollo usa el origen local. Las rutas, parámetros y fragmentos se normalizan a la portada del perfil. No utiliza servicios externos para generar el QR.
 
 ## Netlify y vista previa al compartir
 

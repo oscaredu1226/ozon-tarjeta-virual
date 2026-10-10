@@ -58,8 +58,13 @@ body {
   animation: boot-progress 1.4s ease-in-out infinite;
 }
 .boot-help {
+  position: absolute;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  left: 24px;
+  right: 24px;
   visibility: hidden;
   max-width: 680px;
+  margin: 0 auto;
   font-size: 18px;
   line-height: 1.7;
   animation: show-boot-help 0.01s 12s forwards;

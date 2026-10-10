@@ -1,5 +1,5 @@
 <a class="skip-link" href="#profile-content">Ir al perfil médico</a>
-<main class="page" id="profile-content">
+<main class="page" id="profile-content" [attr.aria-busy]="facade.loading()">
   @if (facade.loading()) {
     <app-profile-skeleton />
   } @else if (facade.failed()) {
@@ -25,6 +25,7 @@
           [phoneHref]="facade.phoneHref()"
           (unavailable)="showUnavailable($event)"
         />
+        <app-profile-qr />
       </div>
     </article>
   }
